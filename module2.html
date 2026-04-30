@@ -80,10 +80,10 @@
     <p class="label">Click Guides</p>
     <h2>Step-by-Step Resources</h2>
     <ul class="resource-list">
-      <li><a href="https://docs.google.com/document/d/1H8Kf9FOKGARqBDxY-k9zMWru_ii9as5y0wofAli8Bqc/preview" target="_blank" rel="noopener">Getting Started with the Brickfield Toolkit ↗</a></li>
-      <li><a href="https://docs.google.com/document/d/13tB7cMgSjZSXw8IyEKjjwHXZYy67M0JGERBoTK62dFY/preview" target="_blank" rel="noopener">High Priority Error Repair Guide ↗</a></li>
-      <li><a href="https://docs.google.com/document/d/1-3RbMi9e4PrJFViD-jA28FFuEuuEqa5j6qZJY9lq0EU/preview" target="_blank" rel="noopener">Low Priority Error Repair Guide ↗</a></li>
-      <li><a href="https://docs.google.com/document/d/1cX0-tjBLIGxVQL7swYOCWZigIDTt7qG9pg9qRIfPuBw/preview" target="_blank" rel="noopener">Quick Introduction to Brickfield Labs ↗</a></li>
+      <li><a href="https://docs.google.com/document/d/1H8Kf9FOKGARqBDxY-k9zMWru_ii9as5y0wofAli8Bqc/pub" target="_blank" rel="noopener">Getting Started with the Brickfield Toolkit ↗</a></li>
+      <li><a href="https://docs.google.com/document/d/13tB7cMgSjZSXw8IyEKjjwHXZYy67M0JGERBoTK62dFY/pub" target="_blank" rel="noopener">High Priority Error Repair Guide ↗</a></li>
+      <li><a href="https://docs.google.com/document/d/1-3RbMi9e4PrJFViD-jA28FFuEuuEqa5j6qZJY9lq0EU/pub" target="_blank" rel="noopener">Low Priority Error Repair Guide ↗</a></li>
+      <li><a href="https://docs.google.com/document/d/1cX0-tjBLIGxVQL7swYOCWZigIDTt7qG9pg9qRIfPuBw/pub" target="_blank" rel="noopener">Quick Introduction to Brickfield Labs ↗</a></li>
       <li><a href="https://www.youtube.com/playlist?list=PLBaAfzmQUpp61OSnbN7x6QUrR6tmGF0Gs" target="_blank" rel="noopener">Video Instructions Playlist ↗</a></li>
       <li><a href="https://support.sou.edu/kb/articles/faculty-file-conversions-for-accessibility" target="_blank" rel="noopener">File Conversions for Accessibility ↗</a></li>
       <li><a href="https://sou.box.com/v/moodle-accessibility" target="_blank" rel="noopener">Poster Set — Designing for Accessibility ↗</a></li>
@@ -110,6 +110,20 @@
 <footer>
   <p>The Faculty Trail Guide &nbsp;·&nbsp; SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</p>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function(cb) {
+      if (localStorage.getItem('ftg-' + cb.id) === 'true') {
+        cb.checked = true;
+      }
+      cb.addEventListener('change', function() {
+        localStorage.setItem('ftg-' + this.id, this.checked);
+      });
+    });
+  });
+</script>
 
 </body>
 </html>

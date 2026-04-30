@@ -103,7 +103,7 @@
     <h2>Mark Your Progress</h2>
     <ul class="checklist">
       <li><input type="checkbox" id="m3-1"><label for="m3-1">I generated a draft splash page using the Gemini Gem</label></li>
-      <li><input type="checkbox" id="m3-2"><label for="m3-2">I CU tomized it with my course information</label></li>
+      <li><input type="checkbox" id="m3-2"><label for="m3-2">I customized it with my course information</label></li>
       <li><input type="checkbox" id="m3-3"><label for="m3-3">I published or previewed the page in Google Sites</label></li>
     </ul>
     <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
@@ -116,6 +116,20 @@
 <footer>
   <p>The Faculty Trail Guide &nbsp;·&nbsp; SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</p>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function(cb) {
+      if (localStorage.getItem('ftg-' + cb.id) === 'true') {
+        cb.checked = true;
+      }
+      cb.addEventListener('change', function() {
+        localStorage.setItem('ftg-' + this.id, this.checked);
+      });
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -120,5 +120,19 @@
   <p>The Faculty Trail Guide &nbsp;·&nbsp; SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</p>
 </footer>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function(cb) {
+      if (localStorage.getItem('ftg-' + cb.id) === 'true') {
+        cb.checked = true;
+      }
+      cb.addEventListener('change', function() {
+        localStorage.setItem('ftg-' + this.id, this.checked);
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
