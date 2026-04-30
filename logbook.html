@@ -15,14 +15,20 @@
       .no-print { display:none; }
       nav { display:none; }
       footer { display:none; }
-      .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      input[type="checkbox"] {
-        -webkit-appearance: checkbox;
-        appearance: checkbox;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        width: 1em;
-        height: 1em;
+      /* Browsers don't render native checkbox state in print.
+         Use Unicode symbols via pseudo-elements instead. */
+      .checklist input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .checklist label::before {
+        content: '\2610\00a0\00a0';
+        font-size: 1.1em;
+      }
+      .checklist input[type="checkbox"]:checked + label::before {
+        content: '\2611\00a0\00a0';
       }
     }
   </style>
