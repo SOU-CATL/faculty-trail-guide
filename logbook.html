@@ -11,26 +11,7 @@
     .reflection { background:#faf9f7; border-radius:8px; padding:1.5rem 2rem; margin-top:2rem; }
     .reflection h3 { margin-top:0; }
     .reflection ul { margin-bottom:0; }
-    @media print {
-      .no-print { display:none; }
-      nav { display:none; }
-      footer { display:none; }
-      /* Browsers don't render native checkbox state in print.
-         Use Unicode symbols via pseudo-elements instead. */
-      .checklist input[type="checkbox"] {
-        position: absolute;
-        opacity: 0;
-        width: 0;
-        height: 0;
-      }
-      .checklist label::before {
-        content: '\2610\00a0\00a0';
-        font-size: 1.1em;
-      }
-      .checklist input[type="checkbox"]:checked + label::before {
-        content: '\2611\00a0\00a0';
-      }
-    }
+    @media print { .no-print { display:none; } }
   </style>
 </head>
 <body>
@@ -49,6 +30,9 @@
       <li><a href="basecamp.html">Base Camp</a></li>
       <li><a href="resources.html">Resources</a></li>
     </ul>
+    <a href="https://catl.sou.edu" target="_blank" rel="noopener" class="nav-catl-logo">
+      <img src="https://catl.sou.edu/wp-content/uploads/catl_logo.png" alt="Center for the Advancement of Teaching and Learning">
+    </a>
   </div>
 </nav>
 
@@ -64,9 +48,9 @@
       <p class="label">Module 1</p>
       <h3>The Shared Map — Hypothes.is</h3>
       <ul class="checklist">
-        <li><input type="checkbox" id="m1-1"><label for="m1-1">I set up a Hypothes.is activity in at least one course</label></li>
-        <li><input type="checkbox" id="m1-2"><label for="m1-2">I tried one of the three annotation options (solo exploration counts)</label></li>
-        <li><input type="checkbox" id="m1-3"><label for="m1-3">I can describe one way Hypothes.is supports a neurodiverse learner in my discipline</label></li>
+        <li><input type="checkbox" id="l1-1"><label for="l1-1">I set up a Hypothes.is activity in at least one course</label></li>
+        <li><input type="checkbox" id="l1-2"><label for="l1-2">I tried an annotation activity (solo exploration counts)</label></li>
+        <li><input type="checkbox" id="l1-3"><label for="l1-3">I can describe one way Hypothes.is supports a neurodiverse learner in my discipline</label></li>
       </ul>
     </div>
 
@@ -74,9 +58,9 @@
       <p class="label">Module 2</p>
       <h3>Clearing the Overgrowth — Brickfield</h3>
       <ul class="checklist">
-        <li><input type="checkbox" id="m2-1"><label for="m2-1">I ran the Brickfield audit on at least one course</label></li>
-        <li><input type="checkbox" id="m2-2"><label for="m2-2">I fixed at least three high-priority errors</label></li>
-        <li><input type="checkbox" id="m2-3"><label for="m2-3">I converted at least one document to an accessible format</label></li>
+        <li><input type="checkbox" id="l2-1"><label for="l2-1">I ran the Brickfield audit on at least one course</label></li>
+        <li><input type="checkbox" id="l2-2"><label for="l2-2">I fixed at least three high-priority errors</label></li>
+        <li><input type="checkbox" id="l2-3"><label for="l2-3">I converted at least one document to an accessible format</label></li>
       </ul>
     </div>
 
@@ -84,9 +68,9 @@
       <p class="label">Module 3</p>
       <h3>The Trailhead Kiosk — Gemini</h3>
       <ul class="checklist">
-        <li><input type="checkbox" id="m3-1"><label for="m3-1">I generated a draft splash page using the Gemini Gem</label></li>
-        <li><input type="checkbox" id="m3-2"><label for="m3-2">I customized it with my course information</label></li>
-        <li><input type="checkbox" id="m3-3"><label for="m3-3">I published or previewed the page in Google Sites</label></li>
+        <li><input type="checkbox" id="l3-1"><label for="l3-1">I generated a splash page with the Gemini Gem</label></li>
+        <li><input type="checkbox" id="l3-2"><label for="l3-2">I customized and published or previewed the page</label></li>
+        <li><input type="checkbox" id="l3-3"><label for="l3-3">I can describe why a welcoming course page matters for student anxiety and rejection sensitivity</label></li>
       </ul>
     </div>
 
@@ -94,9 +78,9 @@
       <p class="label">Module 4</p>
       <h3>The Scenic Overlook — Visual Signposting</h3>
       <ul class="checklist">
-        <li><input type="checkbox" id="m4-1"><label for="m4-1">I applied consistent visual headers or icons to at least three Moodle modules</label></li>
-        <li><input type="checkbox" id="m4-2"><label for="m4-2">I standardized file naming in at least one course</label></li>
-        <li><input type="checkbox" id="m4-3"><label for="m4-3">I ran the "can a student find it in 30 seconds?" test</label></li>
+        <li><input type="checkbox" id="l4-1"><label for="l4-1">I applied consistent visual signposting to at least three Moodle modules</label></li>
+        <li><input type="checkbox" id="l4-2"><label for="l4-2">I standardized my file naming in at least one course</label></li>
+        <li><input type="checkbox" id="l4-3"><label for="l4-3">I ran the 30-second student test</label></li>
       </ul>
     </div>
 
@@ -125,20 +109,6 @@
 <footer>
   <p>The Faculty Trail Guide &nbsp;·&nbsp; SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</p>
 </footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(function(cb) {
-      if (localStorage.getItem('ftg-' + cb.id) === 'true') {
-        cb.checked = true;
-      }
-      cb.addEventListener('change', function() {
-        localStorage.setItem('ftg-' + this.id, this.checked);
-      });
-    });
-  });
-</script>
 
 </body>
 </html>

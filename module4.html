@@ -22,6 +22,9 @@
       <li><a href="basecamp.html">Base Camp</a></li>
       <li><a href="resources.html">Resources</a></li>
     </ul>
+    <a href="https://catl.sou.edu" target="_blank" rel="noopener" class="nav-catl-logo">
+      <img src="https://catl.sou.edu/wp-content/uploads/catl_logo.png" alt="Center for the Advancement of Teaching and Learning">
+    </a>
   </div>
 </nav>
 
@@ -119,20 +122,6 @@
 <footer>
   <p>The Faculty Trail Guide &nbsp;·&nbsp; SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</p>
 </footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(function(cb) {
-      if (localStorage.getItem('ftg-' + cb.id) === 'true') {
-        cb.checked = true;
-      }
-      cb.addEventListener('change', function() {
-        localStorage.setItem('ftg-' + this.id, this.checked);
-      });
-    });
-  });
-</script>
 
 </body>
 </html>
