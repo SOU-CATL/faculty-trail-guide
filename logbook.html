@@ -11,8 +11,28 @@
     .reflection { background:#faf9f7; border-radius:8px; padding:1.5rem 2rem; margin-top:2rem; }
     .reflection h3 { margin-top:0; }
     .reflection ul { margin-bottom:0; }
-    @media print { .no-print { display:none; } }
+    @media print {
+      .no-print { display:none; }
+      .print-checkbox { font-size:1rem; margin-right:0.4em; }
+    }
   </style>
+  <script>
+    window.addEventListener('beforeprint', function() {
+      document.querySelectorAll('.checklist input[type="checkbox"]').forEach(function(cb) {
+        var span = document.createElement('span');
+        span.className = 'print-checkbox';
+        span.textContent = cb.checked ? '☑' : '☐';
+        cb.parentNode.insertBefore(span, cb);
+        cb.style.display = 'none';
+      });
+    });
+    window.addEventListener('afterprint', function() {
+      document.querySelectorAll('.print-checkbox').forEach(function(el) { el.remove(); });
+      document.querySelectorAll('.checklist input[type="checkbox"]').forEach(function(cb) {
+        cb.style.display = '';
+      });
+    });
+  </script>
 </head>
 <body>
 
