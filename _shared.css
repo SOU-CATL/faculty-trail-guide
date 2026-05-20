@@ -284,10 +284,11 @@ nav {
   color: var(--white);
 }
 .section-red h1, .section-red h2, .section-red h3 { color: var(--white); }
-/* Moodier deep-red variant for one punchy block per page */
+/* .section-deep aliased to .section-red so the whole site sits on one CATL red.
+   (Kept the class name so existing HTML using `.section-deep` still renders.) */
 .section-deep {
-  background: var(--red-deep);
-  color: rgba(255, 255, 255, 0.92);
+  background: var(--red);
+  color: var(--white);
 }
 .section-deep h1, .section-deep h2, .section-deep h3 { color: var(--white); }
 
