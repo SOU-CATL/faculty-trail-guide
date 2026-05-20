@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pick Your Path — The Faculty Trail Guide</title>
   <link rel="stylesheet" href="_shared.css">
+  <link rel="icon" type="image/png" href="assets/catl-mark.png">
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-brand" href="index.html">🥾 The Faculty Trail Guide</a>
+    <a class="nav-brand" href="index.html">
+      <img src="assets/catl-mark.png" alt="CATL">
+      <span>The Faculty <em>Trail Guide</em></span>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="path.html" class="active">Pick Your Path</a></li>
@@ -25,21 +29,29 @@
   </div>
 </nav>
 
-<div class="hero">
-  <h1>Pick Your Path</h1>
-  <p class="subtitle">Two ways to make the hike — choose the one that fits your summer.</p>
-</div>
+<header class="hero hero-paper" style="padding-top:4.5rem; padding-bottom:3rem;">
+  <div class="hero-inner" style="grid-template-columns: 1fr;">
+    <div class="hero-copy">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Trail Guide</a><span class="sep">/</span><span>Pick Your Path</span>
+      </nav>
+      <span class="hero-eyebrow">Two Ways to Trek</span>
+      <h1>Pick Your <em>Path</em></h1>
+      <p class="subtitle">Two ways to make the hike — choose the one that fits your summer.</p>
+    </div>
+  </div>
+</header>
 
-<div class="section">
+<div class="section section-paper">
   <div class="section-inner wide">
     <p class="label">Two Ways to Trek</p>
     <div class="two-col" style="margin-top:2rem; gap:3rem;">
 
       <!-- Trail Crew -->
-      <div style="background:#faf9f7; border-radius:12px; padding:2.5rem; border:2px solid #e0ddd8;">
+      <div style="background:var(--paper-2); border-radius:var(--r-lg); padding:2.5rem; border:1px solid var(--rule);">
         <div style="font-size:2.5rem; margin-bottom:1rem;">🏕️</div>
         <div class="card-num" style="font-size:0.85rem;">Community Path</div>
-        <h2 style="font-size:1.75rem; margin-bottom:1rem;">Trail Crew</h2>
+        <h2 style="font-size:1.75rem; margin-bottom:1rem;">Trail <em>Crew</em></h2>
         <p>You like the social aspect. We meet at "Base Camp" (Zoom or on campus) on a schedule. We move through the modules together, clear the path together, and share what we're learning about our own courses.</p>
         <h3 style="margin-top:1.5rem;">Good for you if:</h3>
         <ul>
@@ -53,10 +65,10 @@
       </div>
 
       <!-- Solo Hiker -->
-      <div style="background:#faf9f7; border-radius:12px; padding:2.5rem; border:2px solid #e0ddd8;">
+      <div style="background:var(--paper-2); border-radius:var(--r-lg); padding:2.5rem; border:1px solid var(--rule);">
         <div style="font-size:2.5rem; margin-bottom:1rem;">🎒</div>
         <div class="card-num" style="font-size:0.85rem;">Independent Path</div>
-        <h2 style="font-size:1.75rem; margin-bottom:1rem;">Solo Section-Hiker</h2>
+        <h2 style="font-size:1.75rem; margin-bottom:1rem;">Solo <em>Section-Hiker</em></h2>
         <p>You've got the Field Guide in your pack. You dip in when you have a free hour, tackle one Trail Improvement at a time, and hike at your own pace. No required meetings — just progress.</p>
         <h3 style="margin-top:1.5rem;">Good for you if:</h3>
         <ul>
@@ -73,14 +85,21 @@
   </div>
 </div>
 
-<div class="section section-red" style="text-align:center;">
+<div class="trail-divider"><span class="dot"></span></div>
+
+<div class="section section-deep" style="text-align:center;">
   <div class="section-inner">
-    <p class="manifesto" style="font-size:1.4rem;">Either path leads to the same Logbook.<br>Bring it to the end-of-summer gathering in September.</p>
+    <p class="manifesto" style="font-size:1.4rem;">Either path leads to the same <em>Logbook</em>.<br>Bring it to the end-of-summer gathering in September.</p>
   </div>
 </div>
 
 <footer>
-  <p>The Faculty Trail Guide &nbsp;·&nbsp; SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</p>
+  <div class="footer-mark">
+    <img src="assets/catl-mark.png" alt="CATL">
+    <span>The Faculty <em style="color:var(--red);font-style:italic;font-weight:500;">Trail Guide</em></span>
+  </div>
+  <div>SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</div>
+  <div class="footer-credit">Center for the Advancement of Teaching &amp; Learning · Southern Oregon University</div>
 </footer>
 
 </body>

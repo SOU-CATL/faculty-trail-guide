@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Module 3: The Trailhead Kiosk — The Faculty Trail Guide</title>
   <link rel="stylesheet" href="_shared.css">
+  <link rel="icon" type="image/png" href="assets/catl-mark.png">
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-brand" href="index.html">🥾 The Faculty Trail Guide</a>
+    <a class="nav-brand" href="index.html">
+      <img src="assets/catl-mark.png" alt="CATL">
+      <span>The Faculty <em>Trail Guide</em></span>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="path.html">Pick Your Path</a></li>
@@ -25,24 +29,31 @@
   </div>
 </nav>
 
-<div class="hero">
-  <p style="opacity:0.8; font-size:0.9rem; margin-bottom:0.5rem;">MODULE 3</p>
-  <h1>The Trailhead Kiosk</h1>
-  <p class="subtitle">Gemini Syllabus Splash Page</p>
-</div>
+<header class="hero hero-paper" style="padding-top:4.5rem; padding-bottom:3rem;">
+  <div class="hero-inner" style="grid-template-columns: 1fr;">
+    <div class="hero-copy">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Trail Guide</a><span class="sep">/</span><span>Module 3</span>
+      </nav>
+      <span class="hero-eyebrow">Module 3 · Syllabus Design</span>
+      <h1>The Trailhead <em>Kiosk</em></h1>
+      <p class="subtitle">Gemini Syllabus Splash Page</p>
+    </div>
+  </div>
+</header>
 
-<div class="section">
+<div class="section section-paper">
   <div class="section-inner">
     <p class="label">The Trail Metaphor</p>
-    <h2>A Clear, Welcoming Sign at the Start</h2>
+    <h2>A Clear, Welcoming <em>Sign</em> at the Start</h2>
     <p>Every good trail starts with a kiosk — a clear, welcoming sign that says: here's where you are, here's what you'll find, here's how not to get lost. The first thing your students see should do the same. Right now, for most courses, that first thing is a 10-page document that reads like a legal contract. This module changes that.</p>
   </div>
 </div>
 
-<div class="section section-gray">
+<div class="section section-paper-2">
   <div class="section-inner">
     <p class="label">The UDL Connection</p>
-    <h2>First Impressions and Rejection Sensitivity</h2>
+    <h2>First Impressions and <em>Rejection Sensitivity</em></h2>
     <p>For students with <strong>Rejection Sensitivity Dysphoria</strong> (common in ADHD), first impressions matter enormously. A cold, rule-heavy syllabus signals: <em>this class has a lot of ways to fail.</em> A warm, clear splash page signals: <em>this instructor sees you and wants you to succeed.</em></p>
     <p>A well-designed course welcome page:</p>
     <ul>
@@ -54,10 +65,10 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section section-paper">
   <div class="section-inner">
     <p class="label">Your Trail Activity</p>
-    <h2>Build Your Course Kiosk</h2>
+    <h2>Build Your <em>Course Kiosk</em></h2>
     <p>Use the Gemini Gem to generate a Google Site splash page for one of your courses.</p>
     <div style="margin-top:1.5rem;">
       <div style="display:flex; gap:1.5rem; margin-bottom:1.5rem; align-items:flex-start;">
@@ -77,7 +88,7 @@
         <div>Publish it as the entry point students see in Moodle</div>
       </div>
     </div>
-    <div style="margin-top:2.5rem; padding:1.5rem; background:#faf9f7; border-radius:8px; border-left:4px solid var(--red);">
+    <div style="margin-top:2.5rem; padding:1.5rem; background:var(--paper-2); border-radius:var(--r-md); border-left:4px solid var(--red);">
       <p class="label" style="opacity:1; color:var(--red);">Live Example</p>
       <p style="margin-bottom:0.5rem;"><strong>See what a finished splash page looks like:</strong></p>
       <a href="https://sites.google.com/sou.edu/splash-page-hon301/home" target="_blank" rel="noopener" class="btn btn-red" style="font-size:0.95rem;">View SOU HON 301 Splash Page ↗</a>
@@ -88,45 +99,52 @@
 <div class="section section-red">
   <div class="section-inner">
     <p class="label">Click Guides</p>
-    <h2>Step-by-Step Resources</h2>
+    <h2>Step-by-Step <em>Resources</em></h2>
     <ul class="resource-list">
       <li><a href="https://docs.google.com/document/d/1OFfiMMvi4Yres2VhvBSuu8WLQhXruKSO/preview" target="_blank" rel="noopener">Gemini Gem — Splash Page / Welcoming Page for a Google Site ↗</a></li>
     </ul>
   </div>
 </div>
 
-<div class="section">
+<div class="section section-paper">
   <div class="section-inner">
     <p class="label">Logbook Check</p>
-    <h2>Mark Your Progress</h2>
+    <h2>Mark Your <em>Progress</em></h2>
     <ul class="checklist">
-      <li><input type="checkbox" id="m3-1"><label for="m3-1">I generated a draft splash page using the Gemini Gem</label></li>
-      <li><input type="checkbox" id="m3-2"><label for="m3-2">I customized it with my course information</label></li>
-      <li><input type="checkbox" id="m3-3"><label for="m3-3">I published or previewed the page in Google Sites</label></li>
+      <li><input type="checkbox" id="m3-1"><label for="m3-1" class="item-text">I generated a draft splash page using the Gemini Gem</label></li>
+      <li><input type="checkbox" id="m3-2"><label for="m3-2" class="item-text">I customized it with my course information</label></li>
+      <li><input type="checkbox" id="m3-3"><label for="m3-3" class="item-text">I published or previewed the page in Google Sites</label></li>
     </ul>
     <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
-      <a href="module2.html" class="btn" style="background:#f0eeeb; color:#333;">← Module 2</a>
+      <a href="module2.html" class="btn btn-ghost">← Module 2</a>
       <a href="module4.html" class="btn btn-red">Next: Module 4 →</a>
     </div>
   </div>
 </div>
 
 <footer>
-  <p>The Faculty Trail Guide &nbsp;·&nbsp; SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</p>
+  <div class="footer-mark">
+    <img src="assets/catl-mark.png" alt="CATL">
+    <span>The Faculty <em style="color:var(--red);font-style:italic;font-weight:500;">Trail Guide</em></span>
+  </div>
+  <div>SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</div>
+  <div class="footer-credit">Center for the Advancement of Teaching &amp; Learning · Southern Oregon University</div>
 </footer>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(function(cb) {
-      if (localStorage.getItem('ftg-' + cb.id) === 'true') {
-        cb.checked = true;
-      }
-      cb.addEventListener('change', function() {
-        localStorage.setItem('ftg-' + this.id, this.checked);
+  (function () {
+    const key = 'trailguide:' + location.pathname;
+    const saved = JSON.parse(localStorage.getItem(key) || '{}');
+    document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+      const id = cb.id;
+      if (!id) return;
+      if (saved[id]) cb.checked = true;
+      cb.addEventListener('change', () => {
+        saved[id] = cb.checked;
+        localStorage.setItem(key, JSON.stringify(saved));
       });
     });
-  });
+  })();
 </script>
 
 </body>

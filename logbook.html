@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Logbook — The Faculty Trail Guide</title>
   <link rel="stylesheet" href="_shared.css">
+  <link rel="icon" type="image/png" href="assets/catl-mark.png">
   <style>
     .module-block { margin-bottom:3rem; }
     .module-block h3 { color: var(--red); }
-    .reflection { background:#faf9f7; border-radius:8px; padding:1.5rem 2rem; margin-top:2rem; }
+    .reflection { background:var(--paper-2); border-radius:var(--r-md); padding:1.5rem 2rem; margin-top:2rem; }
     .reflection h3 { margin-top:0; }
     .reflection ul { margin-bottom:0; }
     @media print {
       .no-print { display:none; }
       nav { display:none; }
       footer { display:none; }
-      /* Browsers don't render native checkbox state in print.
-         Use Unicode symbols via pseudo-elements instead. */
+      .checklist { background-image:none; }
       .checklist input[type="checkbox"] {
         position: absolute;
         opacity: 0;
@@ -37,7 +37,10 @@
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-brand" href="index.html">🥾 The Faculty Trail Guide</a>
+    <a class="nav-brand" href="index.html">
+      <img src="assets/catl-mark.png" alt="CATL">
+      <span>The Faculty <em>Trail Guide</em></span>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="path.html">Pick Your Path</a></li>
@@ -52,51 +55,59 @@
   </div>
 </nav>
 
-<div class="hero">
-  <h1>Your Logbook</h1>
-  <p class="subtitle">This is your trail record. Bring it to the September gathering.<br>We'll celebrate what you built and talk about what to carry into fall.</p>
-</div>
+<header class="hero hero-paper" style="padding-top:4.5rem; padding-bottom:3rem;">
+  <div class="hero-inner" style="grid-template-columns: 1fr;">
+    <div class="hero-copy">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Trail Guide</a><span class="sep">/</span><span>Logbook</span>
+      </nav>
+      <span class="hero-eyebrow">Your Field Notes</span>
+      <h1>Your <em>Logbook</em></h1>
+      <p class="subtitle">This is your trail record. Bring it to the September gathering.<br>We'll celebrate what you built and talk about what to carry into fall.</p>
+    </div>
+  </div>
+</header>
 
-<div class="section">
+<div class="section section-paper">
   <div class="section-inner">
 
     <div class="module-block">
       <p class="label">Module 1</p>
-      <h3>The Shared Map — Hypothes.is</h3>
+      <h3>The Shared Map — <em>Hypothes.is</em></h3>
       <ul class="checklist">
-        <li><input type="checkbox" id="m1-1"><label for="m1-1">I set up a Hypothes.is activity in at least one course</label></li>
-        <li><input type="checkbox" id="m1-2"><label for="m1-2">I tried one of the three annotation options (solo exploration counts)</label></li>
-        <li><input type="checkbox" id="m1-3"><label for="m1-3">I can describe one way Hypothes.is supports a neurodiverse learner in my discipline</label></li>
+        <li><input type="checkbox" id="m1-1"><label for="m1-1" class="item-text">I set up a Hypothes.is activity in at least one course</label></li>
+        <li><input type="checkbox" id="m1-2"><label for="m1-2" class="item-text">I tried one of the three annotation options (solo exploration counts)</label></li>
+        <li><input type="checkbox" id="m1-3"><label for="m1-3" class="item-text">I can describe one way Hypothes.is supports a neurodiverse learner in my discipline</label></li>
       </ul>
     </div>
 
     <div class="module-block">
       <p class="label">Module 2</p>
-      <h3>Clearing the Overgrowth — Brickfield</h3>
+      <h3>Clearing the Overgrowth — <em>Brickfield</em></h3>
       <ul class="checklist">
-        <li><input type="checkbox" id="m2-1"><label for="m2-1">I ran the Brickfield audit on at least one course</label></li>
-        <li><input type="checkbox" id="m2-2"><label for="m2-2">I fixed at least three high-priority errors</label></li>
-        <li><input type="checkbox" id="m2-3"><label for="m2-3">I converted at least one document to an accessible format</label></li>
+        <li><input type="checkbox" id="m2-1"><label for="m2-1" class="item-text">I ran the Brickfield audit on at least one course</label></li>
+        <li><input type="checkbox" id="m2-2"><label for="m2-2" class="item-text">I fixed at least three high-priority errors</label></li>
+        <li><input type="checkbox" id="m2-3"><label for="m2-3" class="item-text">I converted at least one document to an accessible format</label></li>
       </ul>
     </div>
 
     <div class="module-block">
       <p class="label">Module 3</p>
-      <h3>The Trailhead Kiosk — Gemini</h3>
+      <h3>The Trailhead Kiosk — <em>Gemini</em></h3>
       <ul class="checklist">
-        <li><input type="checkbox" id="m3-1"><label for="m3-1">I generated a draft splash page using the Gemini Gem</label></li>
-        <li><input type="checkbox" id="m3-2"><label for="m3-2">I customized it with my course information</label></li>
-        <li><input type="checkbox" id="m3-3"><label for="m3-3">I published or previewed the page in Google Sites</label></li>
+        <li><input type="checkbox" id="m3-1"><label for="m3-1" class="item-text">I generated a draft splash page using the Gemini Gem</label></li>
+        <li><input type="checkbox" id="m3-2"><label for="m3-2" class="item-text">I customized it with my course information</label></li>
+        <li><input type="checkbox" id="m3-3"><label for="m3-3" class="item-text">I published or previewed the page in Google Sites</label></li>
       </ul>
     </div>
 
     <div class="module-block">
       <p class="label">Module 4</p>
-      <h3>The Field Sketch — Gemini Infographic</h3>
+      <h3>The Field Sketch — <em>Gemini Sociogram</em></h3>
       <ul class="checklist">
-        <li><input type="checkbox" id="m4-1"><label for="m4-1">I used the Gemini Gem to generate an infographic for one of my courses</label></li>
-        <li><input type="checkbox" id="m4-2"><label for="m4-2">I refined the infographic to reflect my course's key structure or concepts</label></li>
-        <li><input type="checkbox" id="m4-3"><label for="m4-3">I inserted the infographic into Moodle so students see it immediately</label></li>
+        <li><input type="checkbox" id="m4-1"><label for="m4-1" class="item-text">I posted the beginning-of-course forum questions in Moodle and collected student responses</label></li>
+        <li><input type="checkbox" id="m4-2"><label for="m4-2" class="item-text">I used Gemini Canvas to generate a sociogram infographic from the student responses</label></li>
+        <li><input type="checkbox" id="m4-3"><label for="m4-3" class="item-text">I embedded the sociogram infographic into my Moodle course as a Page</label></li>
       </ul>
     </div>
 
@@ -109,7 +120,7 @@
       </ul>
     </div>
 
-    <div style="margin-top:2.5rem; padding:1.5rem; background:#faf9f7; border-radius:8px; border-left:4px solid var(--red);">
+    <div style="margin-top:2.5rem; padding:1.5rem; background:var(--paper-2); border-radius:var(--r-md); border-left:4px solid var(--red);">
       <p><strong>Share Your Logbook</strong><br>
       Bring a screenshot, a course link, or just your notes to the end-of-summer gathering.<br>
       Date and location: <span class="tbd">TBD — see <a href="basecamp.html">Base Camp Dates</a></span></p>
@@ -123,21 +134,28 @@
 </div>
 
 <footer>
-  <p>The Faculty Trail Guide &nbsp;·&nbsp; SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</p>
+  <div class="footer-mark">
+    <img src="assets/catl-mark.png" alt="CATL">
+    <span>The Faculty <em style="color:var(--red);font-style:italic;font-weight:500;">Trail Guide</em></span>
+  </div>
+  <div>SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</div>
+  <div class="footer-credit">Center for the Advancement of Teaching &amp; Learning · Southern Oregon University</div>
 </footer>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(function(cb) {
-      if (localStorage.getItem('ftg-' + cb.id) === 'true') {
-        cb.checked = true;
-      }
-      cb.addEventListener('change', function() {
-        localStorage.setItem('ftg-' + this.id, this.checked);
+  (function () {
+    const key = 'trailguide:' + location.pathname;
+    const saved = JSON.parse(localStorage.getItem(key) || '{}');
+    document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+      const id = cb.id;
+      if (!id) return;
+      if (saved[id]) cb.checked = true;
+      cb.addEventListener('change', () => {
+        saved[id] = cb.checked;
+        localStorage.setItem(key, JSON.stringify(saved));
       });
     });
-  });
+  })();
 </script>
 
 </body>
