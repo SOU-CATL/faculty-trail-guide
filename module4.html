@@ -130,7 +130,7 @@
 
 <script>
   (function () {
-    const key = 'trailguide:' + location.pathname;
+    const key = 'trailguide:progress';
     const saved = JSON.parse(localStorage.getItem(key) || '{}');
     document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
       const id = cb.id;
