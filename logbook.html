@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logbook — The Faculty Trail Guide</title>
+  <link rel="stylesheet" href="_shared.css">
+  <link rel="icon" type="image/png" href="assets/catl-mark.png">
+  <style>
+    .logbook-module {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-lg);
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.75rem;
+      box-shadow: var(--shadow-xs);
+    }
+    .logbook-module-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .logbook-module-num {
+      font-family: var(--font-body);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+    .logbook-module-title {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0;
+    }
+    .logbook-module-title em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--red);
+    }
+    .logbook-module-tool {
+      font-size: 0.85rem;
+      color: var(--ink-3);
+      margin-left: auto;
+    }
+    .logbook-module.coming-soon-module {
+      border-style: dashed;
+      opacity: 0.72;
+    }
+    .progress-bar-wrap {
+      background: var(--paper-2);
+      border-radius: var(--r-pill);
+      height: 10px;
+      overflow: hidden;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--red);
+      border-radius: var(--r-pill);
+      transition: width 0.4s ease;
+      width: 0%;
+    }
+    .progress-label {
+      font-size: 0.82rem;
+      color: var(--ink-3);
+      margin-bottom: 0;
+    }
+    .progress-label strong { color: var(--red); }
+    .completion-banner {
+      display: none;
+      background: var(--red);
+      color: var(--white);
+      border-radius: var(--r-lg);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .completion-banner.visible { display: block; }
+    .completion-banner h2 {
+      color: var(--white);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 0.75rem;
+    }
+    .completion-banner h2 em { color: var(--paper-3); }
+    .completion-banner p { color: rgba(255,255,255,0.88); }
+    .stamp {
+      display: inline-block;
+      border: 3px solid rgba(255,255,255,0.5);
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      line-height: 1.1;
+      text-align: center;
+      font-family: var(--font-head);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1.5rem auto 0;
+      transform: rotate(-6deg);
+      gap: 0.1rem;
+    }
+    .stamp .stamp-year {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/catl-mark.png" alt="CATL">
+      <span>The Faculty <em>Trail Guide</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="path.html">Pick Your Path</a></li>
+      <li><a href="module1.html">Module 1</a></li>
+      <li><a href="module2.html">Module 2</a></li>
+      <li><a href="module3.html">Module 3</a></li>
+      <li><a href="module4.html">Module 4</a></li>
+      <li><a href="logbook.html" class="active">Logbook</a></li>
+      <li><a href="basecamp.html">Base Camp</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero hero-paper" style="padding-top:4.5rem; padding-bottom:3rem;">
+  <div class="hero-inner" style="grid-template-columns: 1fr;">
+    <div class="hero-copy">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Trail Guide</a><span class="sep">/</span><span>Logbook</span>
+      </nav>
+      <span class="hero-eyebrow">Your Progress</span>
+      <h1>The Trail <em>Logbook</em></h1>
+      <p class="subtitle">Mark what you've done. Everything here syncs with the individual module pages.</p>
+    </div>
+  </div>
+</header>
+
+<!-- PROGRESS SUMMARY -->
+<div class="section section-paper-2">
+  <div class="section-inner">
+    <p class="label">Your Trail</p>
+    <h2>How Far <em>You've Come</em></h2>
+    <p>Check off each item as you complete it. Your checkboxes are saved in this browser — so they stay checked between visits, and anything you checked on the module pages will already show here.</p>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+    <p class="progress-label" id="progressLabel"><strong>0 of 9</strong> trail markers checked</p>
+  </div>
+</div>
+
+<!-- MODULE 1 -->
+<div class="section section-paper">
+  <div class="section-inner">
+    <div class="logbook-module">
+      <div class="logbook-module-header">
+        <span class="logbook-module-num">Module 1</span>
+        <h3 class="logbook-module-title">The <em>Shared</em> Map</h3>
+        <span class="logbook-module-tool">Social Annotation · Hypothes.is</span>
+      </div>
+      <ul class="checklist">
+        <li><input type="checkbox" id="m1-1"><label for="m1-1" class="item-text">I set up a Hypothes.is activity in at least one course</label></li>
+        <li><input type="checkbox" id="m1-2"><label for="m1-2" class="item-text">I tried one of the three annotation options (solo exploration counts)</label></li>
+        <li><input type="checkbox" id="m1-3"><label for="m1-3" class="item-text">I can describe one way Hypothes.is supports a neurodiverse learner in my discipline</label></li>
+      </ul>
+      <a href="module1.html" class="btn btn-ghost" style="font-size:0.88rem;">Go to Module 1 →</a>
+    </div>
+
+    <!-- MODULE 2 -->
+    <div class="logbook-module coming-soon-module">
+      <div class="logbook-module-header">
+        <span class="logbook-module-num">Module 2</span>
+        <h3 class="logbook-module-title">Clearing the <em>Overgrowth</em></h3>
+        <span class="logbook-module-tool">Brickfield Accessibility Toolkit · Opening July 2026</span>
+      </div>
+      <p style="font-size:0.95rem; color:var(--ink-3); margin:0;">Checklist items will appear here when Module 2 opens in July. In the meantime, you can work through the <a href="module2.html">DE Federal Requirements Checklist</a>.</p>
+    </div>
+
+    <!-- MODULE 3 -->
+    <div class="logbook-module">
+      <div class="logbook-module-header">
+        <span class="logbook-module-num">Module 3</span>
+        <h3 class="logbook-module-title">The Trailhead <em>Kiosk</em></h3>
+        <span class="logbook-module-tool">Gemini Syllabus Splash Page</span>
+      </div>
+      <ul class="checklist">
+        <li><input type="checkbox" id="m3-1"><label for="m3-1" class="item-text">I generated a draft splash page using the Gemini Gem</label></li>
+        <li><input type="checkbox" id="m3-2"><label for="m3-2" class="item-text">I customized it with my course information</label></li>
+        <li><input type="checkbox" id="m3-3"><label for="m3-3" class="item-text">I published or previewed the page in Google Sites</label></li>
+      </ul>
+      <a href="module3.html" class="btn btn-ghost" style="font-size:0.88rem;">Go to Module 3 →</a>
+    </div>
+
+    <!-- MODULE 4 -->
+    <div class="logbook-module">
+      <div class="logbook-module-header">
+        <span class="logbook-module-num">Module 4</span>
+        <h3 class="logbook-module-title">The Field <em>Sketch</em></h3>
+        <span class="logbook-module-tool">Gemini Sociogram Infographic</span>
+      </div>
+      <ul class="checklist">
+        <li><input type="checkbox" id="m4-1"><label for="m4-1" class="item-text">I posted the beginning-of-course forum questions in Moodle and collected student responses</label></li>
+        <li><input type="checkbox" id="m4-2"><label for="m4-2" class="item-text">I used Gemini Canvas to generate a sociogram infographic from the student responses</label></li>
+        <li><input type="checkbox" id="m4-3"><label for="m4-3" class="item-text">I embedded the sociogram infographic into my Moodle course as a Page</label></li>
+      </ul>
+      <a href="module4.html" class="btn btn-ghost" style="font-size:0.88rem;">Go to Module 4 →</a>
+    </div>
+
+    <!-- COMPLETION BANNER -->
+    <div class="completion-banner" id="completionBanner">
+      <h2>You made it to the <em>summit</em>.</h2>
+      <p>Nine trail markers. All checked. Bring this to the Fall Faculty Forum — your logbook is your proof of the hike.</p>
+      <div class="stamp">
+        <span>SOU Trail</span>
+        <span>Guide</span>
+        <span class="stamp-year">2026</span>
+        <span>Complete</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trail-divider"><span class="dot"></span></div>
+
+<div class="section section-deep" style="text-align:center;">
+  <div class="section-inner">
+    <p class="manifesto" style="font-size:1.25rem;">Bring your completed logbook to the <em>Fall Faculty Forum</em> in September.</p>
+    <div style="margin-top:2rem;">
+      <a href="basecamp.html" class="btn btn-white">View Base Camp Dates →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-mark">
+    <img src="assets/catl-mark.png" alt="CATL">
+    <span>The Faculty <em style="color:var(--red);font-style:italic;font-weight:500;">Trail Guide</em></span>
+  </div>
+  <div>SOU Summer 2026 &nbsp;·&nbsp; CATL | Disability Resources</div>
+  <div class="footer-credit">Center for the Advancement of Teaching &amp; Learning · Southern Oregon University</div>
+</footer>
+
+<script>
+  (function () {
+    const key = 'trailguide:progress';
+    const TOTAL = 9;
+    const saved = JSON.parse(localStorage.getItem(key) || '{}');
+
+    function updateProgress() {
+      const allBoxes = document.querySelectorAll('input[type="checkbox"]');
+      let checked = 0;
+      allBoxes.forEach(cb => { if (cb.checked) checked++; });
+      const pct = Math.round((checked / TOTAL) * 100);
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('progressLabel').innerHTML =
+        '<strong>' + checked + ' of ' + TOTAL + '</strong> trail markers checked';
+      const banner = document.getElementById('completionBanner');
+      if (checked >= TOTAL) {
+        banner.classList.add('visible');
+      } else {
+        banner.classList.remove('visible');
+      }
+    }
+
+    document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+      const id = cb.id;
+      if (!id) return;
+      if (saved[id]) cb.checked = true;
+      cb.addEventListener('change', () => {
+        saved[id] = cb.checked;
+        localStorage.setItem(key, JSON.stringify(saved));
+        updateProgress();
+      });
+    });
+
+    updateProgress();
+  })();
+</script>
+
+</body>
+</html>
