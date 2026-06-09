@@ -3,9 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 1: The Shared Map — The Faculty Trail Guide</title>
+  <title>Module 1: The Trailhead Kiosk — The Faculty Trail Guide</title>
   <link rel="stylesheet" href="_shared.css">
   <link rel="icon" type="image/png" href="assets/catl-mark.png">
+  <style>
+    .instructor-card {
+      display: flex;
+      gap: 1.75rem;
+      align-items: flex-start;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .instructor-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 3px solid var(--paper-3);
+      box-shadow: var(--shadow-sm);
+    }
+    .instructor-info { flex: 1; min-width: 220px; }
+    .instructor-info h3 {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      margin: 0 0 0.2rem;
+      color: var(--ink);
+    }
+    .instructor-info .instructor-title {
+      font-size: 0.88rem;
+      color: var(--ink-3);
+      margin-bottom: 0.75rem;
+    }
+    .instructor-info p {
+      font-size: 0.96rem;
+      color: var(--ink-2);
+      margin-bottom: 0.75rem;
+    }
+    .page-preview {
+      margin-top: 1rem;
+      background: var(--paper-2);
+      border-radius: var(--r-sm);
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      color: var(--ink-3);
+    }
+    .page-preview strong { color: var(--ink-2); display: block; margin-bottom: 0.35rem; }
+    .page-preview ul { margin: 0; padding-left: 1.25rem; }
+    .page-preview li { margin-bottom: 0.2rem; }
+    .login-note {
+      font-size: 0.8rem;
+      color: var(--ink-3);
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
 
@@ -35,90 +92,110 @@
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Trail Guide</a><span class="sep">/</span><span>Module 1</span>
       </nav>
-      <span class="hero-eyebrow">Module 1 · Social Annotation</span>
-      <h1>The <em>Shared</em> Map</h1>
-      <p class="subtitle">Social Annotation with Hypothes.is</p>
+      <span class="hero-eyebrow">Module 1 · Syllabus Design</span>
+      <h1>The Trailhead <em>Kiosk</em></h1>
+      <p class="subtitle">Gemini Syllabus Splash Page</p>
     </div>
   </div>
 </header>
 
-<!-- Trail Metaphor -->
 <div class="section section-paper">
   <div class="section-inner">
     <p class="label">The Trail Metaphor</p>
-    <h2>Leaving <em>Cairns</em> for Each Other</h2>
-    <p>A dense reading is like a forest with no trail markers. When students annotate together, they leave cairns for each other — pointing to the key ideas, flagging the confusing passages, marking where the trail gets hard. Hypothes.is is your cairn-building tool.</p>
+    <h2>A Clear, Welcoming <em>Sign</em> at the Start</h2>
+    <p>Every good trail starts with a kiosk — a clear, welcoming sign that says: here's where you are, here's what you'll find, here's how not to get lost. The first thing your students see should do the same. Right now, for most courses, that first thing is a 10-page document that reads like a legal contract. This module changes that.</p>
   </div>
 </div>
 
-<!-- UDL Connection -->
 <div class="section section-paper-2">
   <div class="section-inner">
     <p class="label">The UDL Connection</p>
-    <h2>Why This Supports <em>Neurodiverse</em> Learners</h2>
-    <p>Social annotation supports neurodivergent learners because it:</p>
+    <h2>First Impressions and <em>Rejection Sensitivity</em></h2>
+    <p>For students with <strong>Rejection Sensitivity Dysphoria</strong> (common in ADHD), first impressions matter enormously. A cold, rule-heavy syllabus signals: <em>this class has a lot of ways to fail.</em> A warm, clear splash page signals: <em>this instructor sees you and wants you to succeed.</em></p>
+    <p>A well-designed course welcome page:</p>
     <ul>
-      <li>Breaks up passive, isolated reading into guided, interactive engagement</li>
-      <li>Allows asynchronous participation — no real-time performance pressure</li>
-      <li>Makes thinking visible without requiring verbal fluency</li>
-      <li>Reduces the "read everything, then discuss" cognitive load</li>
-      <li>Lets students engage with text at their own pace and comfort level</li>
+      <li>Reduces anxiety for students with ADHD, autism, and anxiety disorders</li>
+      <li>Supports executive function by surfacing the most critical information upfront</li>
+      <li>Communicates that your classroom is a structured and safe environment</li>
+      <li>Models the kind of accessible design we're asking students to navigate all semester</li>
     </ul>
-    <p><strong>Who benefits most:</strong> Students with ADHD, dyslexia, anxiety, processing differences, and those who think best in writing or fragments.</p>
   </div>
 </div>
 
-<!-- Trail Activity -->
 <div class="section section-paper">
   <div class="section-inner">
     <p class="label">Your Trail Activity</p>
-    <h2>Replace One <em>Discussion</em> Thread</h2>
-    <p>Replace one discussion thread with a Hypothes.is annotation activity. Three options:</p>
+    <h2>Build Your <em>Course Kiosk</em></h2>
+    <p>Use the Gemini Gem to generate a Google Site splash page for one of your courses.</p>
+    <div style="margin-top:1.5rem;">
+      <div style="display:flex; gap:1.5rem; margin-bottom:1.5rem; align-items:flex-start;">
+        <div style="background:var(--red); color:#fff; border-radius:50%; width:2.2rem; height:2.2rem; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; flex-shrink:0; margin-top:0.2rem;">1</div>
+        <div>Upload your syllabus to the Gem</div>
+      </div>
+      <div style="display:flex; gap:1.5rem; margin-bottom:1.5rem; align-items:flex-start;">
+        <div style="background:var(--red); color:#fff; border-radius:50%; width:2.2rem; height:2.2rem; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; flex-shrink:0; margin-top:0.2rem;">2</div>
+        <div>Review the generated draft</div>
+      </div>
+      <div style="display:flex; gap:1.5rem; margin-bottom:1.5rem; align-items:flex-start;">
+        <div style="background:var(--red); color:#fff; border-radius:50%; width:2.2rem; height:2.2rem; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; flex-shrink:0; margin-top:0.2rem;">3</div>
+        <div>Customize: add your photo, your office hours, and the three things students most need to know in Week 1</div>
+      </div>
+      <div style="display:flex; gap:1.5rem; align-items:flex-start;">
+        <div style="background:var(--red); color:#fff; border-radius:50%; width:2.2rem; height:2.2rem; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; flex-shrink:0; margin-top:0.2rem;">4</div>
+        <div>Publish it as the entry point students see in Moodle</div>
+      </div>
+    </div>
 
-    <h3>Option A — Anchored Text Discussion</h3>
-    <p>Students annotate a shared article using one of three lenses:</p>
-    <ul>
-      <li><strong>Clarify:</strong> "This part is confusing because..."</li>
-      <li><strong>Connect:</strong> "This reminds me of..."</li>
-      <li><strong>Extend:</strong> "An example from my teaching or discipline..."</li>
-    </ul>
+    <!-- LIVE EXAMPLE -->
+    <div style="margin-top:2.5rem; padding:1.5rem 1.75rem; background:var(--paper-2); border-radius:var(--r-md); border-left:4px solid var(--red);">
+      <p class="label" style="opacity:1; color:var(--red);">Live Example</p>
+      <p style="margin-bottom:1rem;"><strong>See what a finished splash page looks like:</strong></p>
 
-    <h3>Option B — Video Annotation</h3>
-    <p>Share a video link through Hypothes.is. Students annotate at specific timestamps with discussion questions or responses.</p>
-
-    <h3>Option C — Artifact Meta-Overview (Group Experience)</h3>
-    <p>Students annotate a discipline-specific artifact — a case study, policy document, or primary source — as a collaborative group exercise.</p>
+      <div class="instructor-card">
+        <img
+          src="assets/clay-austin.png"
+          alt="Dr. Clayton D. Austin"
+          class="instructor-photo"
+        >
+        <div class="instructor-info">
+          <h3>Clayton D. Austin, Ph.D.</h3>
+          <p class="instructor-title">Course Professor · ED 591: Applied Strategies for Engaging Adult Learners · SOU MSEd Program</p>
+          <p>Dr. Austin built this splash page for his summer graduate course using the Gemini Gem. It replaces a dense syllabus document with a structured, welcoming entry point students can navigate at a glance.</p>
+          <div class="page-preview">
+            <strong>What's inside this splash page:</strong>
+            <ul>
+              <li>4-step "How to Start" orientation guide</li>
+              <li>Professor bio, email, and office hours</li>
+              <li>Syllabus download and course AI policy</li>
+              <li>8-week course roadmap</li>
+              <li>Accessibility, writing center, and library resources</li>
+            </ul>
+          </div>
+          <a href="https://sites.google.com/sou.edu/ed-591-splash-page/home" target="_blank" rel="noopener" class="btn btn-red" style="font-size:0.92rem; margin-top:1rem; display:inline-flex;">View Dr. Austin's Splash Page ↗</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- Click Guides -->
 <div class="section section-red">
   <div class="section-inner">
     <p class="label">Click Guides</p>
     <h2>Step-by-Step <em>Resources</em></h2>
     <ul class="resource-list">
-      <li><a href="https://support.sou.edu/kb/articles/faculty-create-a-hypothesis-activity" target="_blank" rel="noopener">How to Create a Hypothesis Activity in Moodle ↗</a></li>
-      <li><a href="https://youtu.be/9qV-jyY-DH0" target="_blank" rel="noopener">Annotate a YouTube Video (2-minute video) ↗</a></li>
-      <li><a href="https://youtu.be/805VaqLMnjE?si=Rn3GByMZ1YlRBMSk" target="_blank" rel="noopener">Create a Hypothesis Link (with video walkthrough) ↗</a></li>
-      <li><a href="https://web.hypothes.is/getting-started-with-moodle/" target="_blank" rel="noopener">Getting Started with Hypothesis + Moodle ↗</a></li>
-      <li><a href="https://support.sou.edu/kb/articles/faculty-link-file-for-hypothesis-activity" target="_blank" rel="noopener">Link a PDF File with Hypothesis ↗</a></li>
-      <li><a href="https://support.sou.edu/kb/articles/hypothesis-resources-for-annotations" target="_blank" rel="noopener">All Resources and Guides for Hypothesis ↗</a></li>
-      <li><a href="https://catl.sou.edu/student-moodle-how-tos/#toggle-id-2" target="_blank" rel="noopener">Student Guides to Hypothesis ↗</a></li>
-      <li><a href="https://web.hypothes.is/event/inside-the-classroom-how-educators-are-using-social-annotation-to-deepen-engagement/" target="_blank" rel="noopener">Community Reading: Inside the Classroom — How Educators Are Using Social Annotation ↗</a></li>
+      <li><a href="https://docs.google.com/document/d/1OFfiMMvi4Yres2VhvBSuu8WLQhXruKSO/preview" target="_blank" rel="noopener">Gemini Gem — Splash Page / Welcoming Page for a Google Site ↗</a></li>
     </ul>
   </div>
 </div>
 
-<!-- Logbook Check -->
 <div class="section section-paper">
   <div class="section-inner">
     <p class="label">Logbook Check</p>
     <h2>Mark Your <em>Progress</em></h2>
-    <p>Check off each item when complete. Bring your completed logbook to the end-of-summer gathering.</p>
     <ul class="checklist">
-      <li><input type="checkbox" id="m1-1"><label for="m1-1" class="item-text">I set up a Hypothes.is activity in at least one course</label></li>
-      <li><input type="checkbox" id="m1-2"><label for="m1-2" class="item-text">I tried one of the three annotation options (solo exploration counts)</label></li>
-      <li><input type="checkbox" id="m1-3"><label for="m1-3" class="item-text">I can describe one way Hypothes.is supports a neurodiverse learner in my discipline</label></li>
+      <li><input type="checkbox" id="m1-1"><label for="m1-1" class="item-text">I generated a draft splash page using the Gemini Gem</label></li>
+      <li><input type="checkbox" id="m1-2"><label for="m1-2" class="item-text">I customized it with my course information</label></li>
+      <li><input type="checkbox" id="m1-3"><label for="m1-3" class="item-text">I published or previewed the page in Google Sites</label></li>
     </ul>
     <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
       <a href="module2.html" class="btn btn-red">Next: Module 2 →</a>
