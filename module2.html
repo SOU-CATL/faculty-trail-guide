@@ -6,6 +6,24 @@
   <title>Module 2: The Shared Map — The Faculty Trail Guide</title>
   <link rel="stylesheet" href="_shared.css">
   <link rel="icon" type="image/png" href="assets/catl-mark.png">
+  <style>
+    /* Specific override to allow inline note links inside the red section list without double-arrows */
+    .resource-list a.note-link {
+      display: inline !important;
+      color: #ffffff !important;
+      text-decoration: underline !important;
+      font-weight: normal !important;
+      margin-left: 0.35rem;
+    }
+    .resource-list a.note-link::before {
+      content: "" !important;
+      display: none !important;
+    }
+    .resource-list a.note-link:hover {
+      color: #ffffff !important;
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
 
@@ -100,7 +118,10 @@
       <li><a href="https://support.sou.edu/kb/articles/faculty-create-a-hypothesis-activity" target="_blank" rel="noopener">How to Create a Hypothesis Activity in Moodle ↗</a></li>
       <li><a href="https://youtu.be/9qV-jyY-DH0" target="_blank" rel="noopener">Annotate a YouTube Video (2-minute video) ↗</a></li>
       <li><a href="https://youtu.be/805VaqLMnjE?si=Rn3GByMZ1YlRBMSk" target="_blank" rel="noopener">Create a Hypothesis Link (with video walkthrough) ↗</a></li>
-      <li><a href="https://web.hypothes.is/getting-started-with-moodle/" target="_blank" rel="noopener">Getting Started with Hypothesis + Moodle ↗</a> (Note: See SOU's instructions for setting up a link.)</li>
+      <li>
+        <a href="https://web.hypothes.is/getting-started-with-moodle/" target="_blank" rel="noopener">Getting Started with Hypothesis + Moodle ↗</a> 
+        <a href="https://support.sou.edu/kb/articles/faculty-create-a-hypothesis-activity" target="_blank" rel="noopener" class="note-link">(Note: See SOU's instructions for setting up a link.)</a>
+      </li>
       <li><a href="https://support.sou.edu/kb/articles/faculty-link-file-for-hypothesis-activity" target="_blank" rel="noopener">Link a PDF File with Hypothesis ↗</a></li>
       <li><a href="https://support.sou.edu/kb/articles/hypothesis-resources-for-annotations" target="_blank" rel="noopener">All Resources and Guides for Hypothesis ↗</a></li>
       <li><a href="https://catl.sou.edu/student-moodle-how-tos/#toggle-id-2" target="_blank" rel="noopener">Student Guides to Hypothesis ↗</a></li>
