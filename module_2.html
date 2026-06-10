@@ -6,6 +6,24 @@
   <title>Module 2: The Shared Map — The Faculty Trail Guide</title>
   <link rel="stylesheet" href="_shared.css">
   <link rel="icon" type="image/png" href="assets/catl-mark.png">
+  <style>
+    /* Specific override to allow inline note links inside the red section list without double-arrows */
+    .resource-list a.note-link {
+      display: inline !important;
+      color: #ffffff !important;
+      text-decoration: underline !important;
+      font-weight: normal !important;
+      margin-left: 0.35rem;
+    }
+    .resource-list a.note-link::before {
+      content: "" !important;
+      display: none !important;
+    }
+    .resource-list a.note-link:hover {
+      color: #ffffff !important;
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
 
@@ -102,7 +120,7 @@
       <li><a href="https://youtu.be/805VaqLMnjE?si=Rn3GByMZ1YlRBMSk" target="_blank" rel="noopener">Create a Hypothesis Link (with video walkthrough) ↗</a></li>
       <li>
         <a href="https://web.hypothes.is/getting-started-with-moodle/" target="_blank" rel="noopener">Getting Started with Hypothesis + Moodle ↗</a> 
-        <a href="https://support.sou.edu/kb/articles/faculty-create-a-hypothesis-activity" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: underline; margin-left: 0.5rem;">(Note: See SOU's instructions for setting up a link.)</a>
+        <a href="https://support.sou.edu/kb/articles/faculty-create-a-hypothesis-activity" target="_blank" rel="noopener" class="note-link">(Note: See SOU's instructions for setting up a link.)</a>
       </li>
       <li><a href="https://support.sou.edu/kb/articles/faculty-link-file-for-hypothesis-activity" target="_blank" rel="noopener">Link a PDF File with Hypothesis ↗</a></li>
       <li><a href="https://support.sou.edu/kb/articles/hypothesis-resources-for-annotations" target="_blank" rel="noopener">All Resources and Guides for Hypothesis ↗</a></li>
